@@ -10,7 +10,7 @@ local function LoadXT_Script()
     
     local success, err = pcall(function()
         -- 使用原始GitHub链接加载脚本
-        local scriptUrl = "https://raw.githubusercontent.com/boyscp/scriscriptsc/main/XT_Script.lua"
+        local scriptUrl = "https://raw.githubusercontent.com/XTxt-design/XT-/refs/heads/main/XT%E8%84%9A%E6%9C%AC%E6%BA%90%E4%BB%A3%E7%A0%81.lua"
         local scriptContent = game:HttpGet(scriptUrl, true)
         
         -- 检查脚本内容是否有效
