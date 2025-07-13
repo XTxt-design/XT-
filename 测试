@@ -182,10 +182,14 @@ Tab:AddToggle({
 		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
 	end
-})
-Tab:AddButton({
-	Name = "传送玩家",
-	Callback = function()
-      	loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
-  	end
-})
+})addRoundButton(ScriptCenterTab, {
+    Name = "传送",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+        loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+  	end）
+  	if success then
+              OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
