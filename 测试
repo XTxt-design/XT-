@@ -1,7 +1,3 @@
--- 延迟加载确保注入器完全初始化
-wait(1)
-LoadXT_Script()
-
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "XT脚本"; Text ="载入中"; Duration = 2; })wait("3")
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "XT脚本"; Text ="小t牛比"; Duration = 2; })wait("3")
@@ -181,17 +177,4 @@ Tab:AddToggle({
 		else
 		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
-	end
-})
-Tab:AddButton({
-	Name = "防止掉线（反挂机）",
-	Callback = function()
-	print("Anti Afk On")
-		local vu = game:GetService("VirtualUser")
-		game:GetService("Players").LocalPlayer.Idled:connect(function()
-		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		   wait(1)
-		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		end)
-  	end
 })
