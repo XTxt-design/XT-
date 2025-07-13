@@ -1,48 +1,3 @@
-local function LoadXT_Script()
-    -- 添加详细的加载状态反馈
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "XT脚本",
-        Text = "开始加载脚本...",
-        Duration = 2
-    })
-    
-    wait(1)
-    
-    local success, err = pcall(function()
-        -- 使用原始GitHub链接加载脚本
-        local scriptUrl = "https://raw.githubusercontent.com/XTxt-design/XT-/refs/heads/main/XT%E8%84%9A%E6%9C%AC%E6%BA%90%E4%BB%A3%E7%A0%81.lua"
-        local scriptContent = game:HttpGet(scriptUrl, true)
-        
-        -- 检查脚本内容是否有效
-        if not scriptContent or #scriptContent < 100 then
-            error("无法获取脚本内容或内容过短")
-        end
-        
-        -- 编译并执行脚本
-        local loadFunc, compileError = loadstring(scriptContent)
-        if not loadFunc then
-            error("脚本编译错误: "..tostring(compileError))
-        end
-        
-        loadFunc()
-    end)
-    
-    if not success then
-        warn("[XT脚本] 加载错误: "..tostring(err))
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "XT脚本错误",
-            Text = "加载失败: "..tostring(err),
-            Duration = 10
-        })
-    else
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "XT脚本",
-            Text = "加载成功!",
-            Duration = 3
-        })
-    end
-end
-
 -- 延迟加载确保注入器完全初始化
 wait(1)
 LoadXT_Script()
@@ -227,4 +182,10 @@ Tab:AddToggle({
 		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
 	end
+})
+Tab:AddButton({
+	Name = "传送玩家",
+	Callback = function()
+      	loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+  	end
 })
