@@ -183,21 +183,227 @@ Tab:AddToggle({
 		end
 	end
 })
+Tab:AddButton({
+	Name = "防止掉线（反挂机）",
+	Callback = function()
+	print("Anti Afk On")
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		   wait(1)
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+  	end
+})
 
-addRoundButton(ScriptCenterTab, {
-    Name = "传送",
-    Callback = function()
-        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
-            end)
-            if success then
-                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
-            else
-                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+Tab:AddButton({
+
+	Name = "点击传送工具",
+
+	Callback = function()
+
+mouse = game.Players.LocalPlayer:GetMouse() tool = Instance.new("Tool") tool.RequiresHandle = false tool.Name = "[FE] TELEPORT TOOL" tool.Activated:connect(function() local pos = mouse.Hit+Vector3.new(0,2.5,0) pos = CFrame.new(pos.X,pos.Y,pos.Z) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos end) tool.Parent = game.Players.LocalPlayer.Backpack
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "无敌",
+
+	Callback = function()
+
+local lp = game:GetService "Players".LocalPlayer
+
+if lp.Character:FindFirstChild "Head" then
+
+    local char = lp.Character
+
+    char.Archivable = true
+
+    local new = char:Clone()
+
+    new.Parent = workspace
+
+    lp.Character = new
+
+    wait(2)
+
+    local oldhum = char:FindFirstChildWhichIsA "Humanoid"
+
+    local newhum = oldhum:Clone()
+
+    newhum.Parent = char
+
+    newhum.RequiresNeck = false
+
+    oldhum.Parent = nil
+
+    wait(2)
+
+    lp.Character = char
+
+    new:Destroy()
+
+    wait(1)
+
+    newhum:GetPropertyChangedSignal("Health"):Connect(
+
+        function()
+
+            if newhum.Health <= 0 then
+
+                oldhum.Parent = lp.Character
+
+                wait(1)
+
+                oldhum:Destroy()
+
             end
+
         end)
-    end,
-    Color = Color3.fromRGB(123, 104, 238)
+
+    workspace.CurrentCamera.CameraSubject = char
+
+    if char:FindFirstChild "Animate" then
+
+        char.Animate.Disabled = true
+
+        wait(.1)
+
+        char.Animate.Disabled = false
+
+    end
+
+    lp.Character:FindFirstChild "Head":Destroy()
+
+end
+
+end
+
+})
+Tab:AddTextbox({
+
+	Name = "跳跃高度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end	 
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "穿墙",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    Noclip = true
+
+		    Stepped = game.RunService.Stepped:Connect(function()
+
+			    if Noclip == true then
+
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+
+                        if b.Name == game.Players.LocalPlayer.Name then
+
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+
+                                if v:IsA("BasePart") then
+
+                                    v.CanCollide = false
+
+                                end
+
+                            end
+
+                        end
+
+                    end
+
+			    else
+
+				    Stepped:Disconnect()
+
+			    end
+
+		    end)
+
+	    else
+
+		    Noclip = false
+
+	    end
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+local Tab = Window:MakeTab({
+	Name = "特殊脚本",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({  
+    Name = "游戏通行证(跑酷游戏)",
+	Callback = function()
+	for _,v in pairs(game:GetDescendants()) do
+if v.ClassName == "RemoteEvent" then
+if v.Parent.Name == "WeaponsRemotes" or v.Parent.Name == "VipRemotes" or v.Parent.Name == "Remotes" then
+v:FireServer()
+end
+end
+end
+     end
 })
