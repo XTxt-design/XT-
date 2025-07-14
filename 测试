@@ -429,6 +429,7 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+
 Tab:AddButton({
     Name = "罚站",
     Callback = function()
@@ -985,7 +986,6 @@ Tab:AddButton({
             end
         end)
     end,
-d,
     Color = Color3.fromRGB(123, 104, 238)
 })
 
@@ -1219,6 +1219,7 @@ local game_id = 1318971886
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
 end
 })
+
 Tab:AddButton({
   Name = "加入自然灾害生存",
   Callback = function()
