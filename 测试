@@ -1392,6 +1392,24 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "叶脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/roblox-ye/QQ515966991/refs/heads/main/ROBLOX-CNVIP-XIAOYE.lua"))()  
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
     Name = "加载导管中心",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载导管中心...", Time = 3})
@@ -1446,6 +1464,24 @@ Tab:AddButton({
         end)
     end,
     Color = Color3.fromRGB(50, 50, 50)
+})
+
+Tab:AddButton({
+    Name = "北约中心",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/USA868/114514-55-646-114514-88-61518-618-840-1018-634-10-4949-3457578401-615/main/Protected-36.lua"))() 
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
 })
 
 local Tab = Window:MakeTab({
@@ -1782,3 +1818,535 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+local Tab = Window:MakeTab({
+	Name = "力量传奇",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "脚本"
+})
+
+Tab:AddButton({
+    Name = "修改力量",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "力量传奇Muscle Legend",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))() 
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "力量传奇",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:GetObjects("rbxassetid://10048914323")[1].Source)() 
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "力量传奇speed hub x",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Muscle-Legends"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+local Section = Tab:AddSection({
+	Name = "传送位置"
+})
+
+Tab:AddButton({
+	Name = "传送到出生点",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7, 3, 108)
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "传送到冰霜健身房",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2543, 13, -410)
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "传送到神话健身房",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2177, 13, 1070)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "传送到永恒健身房",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6686, 13, -1284)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "传送到传说健身房",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4676, 997, -3915)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "传送到肌肉之王健身房",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8554, 22, -5642)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "传送到安全岛",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, 10, 1838)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "传送到幸运抽奖区域",
+	Callback = function()
+      		      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2606, -2, 5753)
+  	end    
+})
+
+local Tab = Window:MakeTab({
+    Name = "灭霸模拟器",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+      Name = "出生/复活的地方",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,153,-20)
+      end
+    })
+Tab:AddButton({
+      Name = "刷碎片/铸造的地方",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20,115,-695)
+      end
+   })
+Tab:AddButton({
+      Name = "商店/升级武器的地方",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28,1061,1590)
+      end
+    })
+Tab:AddButton({
+      Name = "时间宝石的位置",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(444.5,117,443.5)
+      end
+    })
+Tab:AddButton({
+      Name = "空间宝石的位置",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-412,73,-444)
+      end
+    })
+Tab:AddButton({
+      Name = "现实宝石的位置",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-420,13,690)
+      end
+    })
+Tab:AddButton({
+      Name = "能量宝石怪的位置（建议开夜视）",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(433,55,-326)
+      end
+    })
+Tab:AddButton({
+      Name = "灭霸模拟器快速自杀",
+      Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-4985,99999)
+      end
+    })
+
+local Tab = Window:MakeTab({
+	Name = "忍者传奇",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+autoswing = false
+function swinging()
+    spawn(
+        function()
+            while autoswing == true do
+                task.wait()
+                game:GetService("Players").LocalPlayer.ninjaEvent:FireServer("swingKatana")
+                if not autoswing then
+                    break
+                end
+            end
+        end
+    )
+end
+autosell = false
+function selling()
+    spawn(
+        function()
+            while autosell == true do
+                task.wait(.01)
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    game.workspace.sellAreaCircles["sellAreaCircle7"].circleInner.CFrame =
+                        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
+                    wait(.1)
+                    game.workspace.sellAreaCircles["sellAreaCircle7"].circleInner.CFrame =
+                        game.Workspace.Part.CFrame
+                    if not autosell then
+                        break
+                    end
+                end
+            end
+        end
+    )
+end
+autosellmax = false
+function maxsell()
+    spawn(
+        function()
+            while autosellmax == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    if game.Players.LocalPlayer.PlayerGui.gameGui.maxNinjitsuMenu.Visible == true then
+                        game.workspace.sellAreaCircles["sellAreaCircle7"].circleInner.CFrame =
+                            game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
+                        task.wait()
+                        game.workspace.sellAreaCircles["sellAreaCircle7"].circleInner.CFrame =
+                            game.Workspace.Part.CFrame
+                    end
+                end
+                if not autosellmax then
+                    break
+                end
+            end
+        end
+    )
+end
+autobuyswords = false
+function buyswords()
+    spawn(
+        function()
+            while autobuyswords == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    local oh1 = "buyAllSwords"
+                    local oh2 = {
+                        "Ground",
+                        "Astral Island",
+                        "Space Island",
+                        "Tundra Island",
+                        "Eternal Island",
+                        "Sandstorm",
+                        "Thunderstorm",
+                        "Ancient Inferno Island",
+                        "Midnight Shadow Island",
+                        "Mythical Souls Island",
+                        "Winter Wonder Island"
+                    }
+                    for i = 1, #oh2 do
+                        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                    end
+                end
+                if not autobuyswords then
+                    break
+                end
+            end
+        end
+    )
+end
+autobuybelts = false
+function buybelts()
+    spawn(
+        function()
+            while autobuybelts == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    local oh1 = "buyAllBelts"
+                    local oh2 = {
+                        "Ground",
+                        "Astral Island",
+                        "Space Island",
+                        "Tundra Island",
+                        "Eternal Island",
+                        "Sandstorm",
+                        "Thunderstorm",
+                        "Ancient Inferno Island",
+                        "Midnight Shadow Island",
+                        "Mythical Souls Island",
+                        "Winter Wonder Island"
+                    }
+                    for i = 1, #oh2 do
+                        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                    end
+                end
+                if not autobuybelts then
+                    break
+                end
+            end
+        end
+    )
+end
+autobuyranks = false
+function buyranks()
+    spawn(
+        function()
+            while autobuyranks == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    local oh1 = "buyRank"
+                    local oh2 = game:GetService("ReplicatedStorage").Ranks.Ground:GetChildren()
+                    for i = 1, #oh2 do
+                        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
+                    end
+                end
+                if not autobuyranks then
+                    break
+                end
+            end
+        end
+    )
+end
+autobuyskill = false
+function buyskill()
+    spawn(
+        function()
+            while autobuyskill == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    local oh1 = "buyAllSkills"
+                    local oh2 = {
+                        "Ground",
+                        "Astral Island",
+                        "Space Island",
+                        "Tundra Island",
+                        "Eternal Island",
+                        "Sandstorm",
+                        "Thunderstorm",
+                        "Ancient Inferno Island",
+                        "Midnight Shadow Island",
+                        "Mythical Souls Island",
+                        "Winter Wonder Island"
+                    }
+                    for i = 1, #oh2 do
+                        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                    end
+                end
+                if not autobuyskill then
+                    break
+                end
+            end
+        end
+    )
+end
+autobuyshurikens = false
+function buyshurikens()
+    spawn(
+        function()
+            while autobuyshurikens == true do
+                task.wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+                    local oh1 = "buyAllShurikens"
+                    local oh2 = {
+                        "Ground",
+                        "Astral Island",
+                        "Space Island",
+                        "Tundra Island",
+                        "Eternal Island",
+                        "Sandstorm",
+                        "Thunderstorm",
+                        "Ancient Inferno Island",
+                        "Midnight Shadow Island",
+                        "Mythical Souls Island",
+                        "Winter Wonder Island"
+                    }
+                    for i = 1, #oh2 do
+                        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                    end
+                end
+                if not autobuyshurikens then
+                    break
+                end
+            end
+        end
+    )
+end
+
+local Section = Tab:AddSection({
+	Name = "自动挥舞/售卖"
+})
+
+Tab:AddToggle(
+    {
+        Name = "自动挥舞",
+        Default = false,
+        Callback = function(x)
+            autoswing = x
+            if autoswing then
+                swinging()
+            end
+        end
+    }
+)
+
+Tab:AddToggle(
+    {
+        Name = "自动售卖",
+        Default = false,
+        Callback = function(x)
+            autosell = x
+            if autosell then
+                selling()
+            end
+        end
+    }
+)
+    
+Tab:AddToggle(
+    {
+        Name = "存满了自动售卖",
+        Default = false,
+        Callback = function(x)
+            autosellmax = x
+            if autosellmax then
+                maxsell()
+            end
+        end
+    }
+)
+
+local Section = Tab:AddSection({
+	Name = "自动购买功能"
+})
+
+Tab:AddToggle(
+    {
+        Name = "自动购买剑",
+        Default = false,
+        Callback = function(x)
+            autobuyswords = x
+            if autobuyswords then
+                buyswords()
+            end
+        end
+    }
+)
+
+Tab:AddToggle(
+    {
+        Name = "自动购买腰带",
+        Default = false,
+        Callback = function(x)
+            autobuybelts = x
+            if autobuybelts then
+                buybelts()
+            end
+        end
+    }
+)
+
+Tab:AddToggle(
+    {
+        Name = "自动购买称号",
+        Default = false,
+        Callback = function(x)
+            autobuyranks = x
+            if autobuyranks then
+                buyranks()
+            end
+        end
+    }
+)
+
+Tab:AddToggle(
+    {
+        Name = "自动购买忍术",
+        Default = false,
+        Callback = function(x)
+            autobuyskill = x
+            if autobuyskill then
+                buyskill()
+            end
+        end
+    }
+)
+
+Tab:AddToggle(
+    {
+        Name = "自动购买",
+        Default = false,
+        Callback = function(x)
+            autobuyshurikens = x
+            if autobuyshurikens then
+                buyshurikens()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "解锁所有岛",
+        Callback = function()
+            for _, v in next, game.workspace.islandUnlockParts:GetChildren() do
+                if v then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.islandSignPart.CFrame
+                    wait(.5)
+                end
+            end
+        end
+    }
+)
