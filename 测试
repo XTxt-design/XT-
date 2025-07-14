@@ -878,7 +878,7 @@ Tab:AddButton({
 
 Tab:AddButton({
     Name = "隐身(E)",
-    Default = false,
+    Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
@@ -968,7 +968,7 @@ Tab:AddButton({
 
 Tab:AddButton({
     Name = "踏空行走",
-    Default = false,
+    Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
