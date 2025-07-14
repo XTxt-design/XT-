@@ -601,66 +601,8 @@ toggleButton.MouseButton1Click:Connect(function()
 					end
 				end
 			end
-		end)
 
-		spawn(function()
-			local ctrlf = {
-				["w"] = false,
-				["a"] = false,
-				["s"] = false,
-				["d"] = false
-			}
-			mouse.KeyDown:Connect(function(key)
-				key = key:lower()
-				if ctrlf[key] ~= nil then
-					ctrlf[key] = true
-				end
-			end)
-			mouse.KeyUp:Connect(function(key)
-				key = key:lower()
-				if ctrlf[key] ~= nil then
-					ctrlf[key] = false
-				end
-			end)
-			while rs.RenderStepped:Wait() and c and c.Parent do
-				if hrp and hrp.Parent then
-					local flyspeed = tonumber(flySpeedTextbox.Text)
-					local fb = ((ctrlf["w"] and flyspeed) or 0) + ((ctrlf["s"] and -flyspeed) or 0)
-					local lr = ((ctrlf["a"] and -flyspeed) or 0) + ((ctrlf["d"] and flyspeed) or 0)
-					local camcf = ws.CurrentCamera.CFrame
-					local caX, caY, caZ, ca1, ca2, ca3, ca4, ca5, ca6, ca7, ca8, ca9 = camcf:GetComponents()
-					local flycf = hrp.CFrame
-					flycf = CFrame.new(flycf.X, flycf.Y, flycf.Z, ca1, ca2, ca3, ca4, ca5, ca6, ca7, ca8, ca9)
-					flycf += camcf.lookVector * fb
-					flycf += camcf.rightVector * lr
-					hrp.CFrame = flycf
-				end
-			end
-			
-			local c1 = lp.Character
-			if c1 and c1.Parent then
-				notify("已重生")
-			end
-			
-			if toggleButton and toggleButton.Parent then
-				toggleButton.Text = "开始弹飞"
-			end
-		end)
-		
-		if toggleButton and toggleButton.Parent then
-			toggleButton.Text = "重生"
-		end
-		
-		notify("完成")
-	end
-end)
 
-closeButton.MouseButton1Click:Connect(function()
-	if c and c.Parent then
-		resReq()
-	end
-	ultimateFling:Destroy()
-end)
 local Tab = Window:MakeTab({
     Name = "通用",
     Icon = "rbxassetid://4483345998",
@@ -677,7 +619,7 @@ Tab:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "数值",
+	Valueame = "数值",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 	end    
