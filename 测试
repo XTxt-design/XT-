@@ -727,7 +727,7 @@ Tab:AddButton({
             local success, err = pcall(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/FPS-X-GUI/main/FPS_X.lua"))()
             end)
-ess then
+            if success then
                 OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
             else
                 OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
@@ -1322,7 +1322,7 @@ Tab:AddButton({
             if success then
                 OrionLib:MakeNotification({Name = "成功", Content = "鬼脚本加载完成", Time = 3})
             else
-                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+              OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
             end
         end)
     end,
