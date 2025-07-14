@@ -399,7 +399,6 @@ local Tab = Window:MakeTab({
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-local about = UITab4:section("『LENG Script』",false)
 
 Tab:AddButton({
   Name = "加入极速传奇",
@@ -407,7 +406,8 @@ Tab:AddButton({
 local game_id = 3101667897
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入鲨口求生",
@@ -415,7 +415,8 @@ Tab:AddButton({
 local game_id = 8908228901
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入监狱人生",
@@ -423,7 +424,8 @@ Tab:AddButton({
 local game_id = 155615604
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入忍者传奇",
@@ -431,7 +433,8 @@ Tab:AddButton({
 local game_id = 3956818381
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入Break in (故事)",
@@ -439,14 +442,16 @@ Tab:AddButton({
 local game_id = 1318971886
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 Tab:AddButton({
   Name = "加入自然灾害生存",
   Callback = function()
 local game_id = 189707
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入力量传奇",
@@ -454,7 +459,8 @@ Tab:AddButton({
 local game_id = 3623096087
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 Tab:AddButton({
   Name = "加入餐厅大亨2",
@@ -462,10 +468,11 @@ Tab:AddButton({
 local game_id = 3398014311
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end})
+end
+})
 
 local Tab = Window:MakeTab({
-    Name = "各种脚本",
+    Name = "脚本",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
