@@ -1,3 +1,52 @@
+local function LoadXT_Script()
+    -- 添加详细的加载状态反馈
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "XT脚本",
+        Text = "开始加载脚本...",
+        Duration = 2
+    })
+    
+    wait(1)
+    
+    local success, err = pcall(function()
+        -- 使用原始GitHub链接加载脚本
+        local scriptUrl = "loadstring(game:HttpGet("https://raw.githubusercontent.com/XTxt-design/XT-/refs/heads/main/%E6%B5%8B%E8%AF%95"))()"
+        local scriptContent = game:HttpGet(scriptUrl, true)
+        
+        -- 检查脚本内容是否有效
+        if not scriptContent or #scriptContent < 100 then
+            error("无法获取脚本内容或内容过短")
+        end
+        
+        -- 编译并执行脚本
+        local loadFunc, compileError = loadstring(scriptContent)
+        if not loadFunc then
+            error("脚本编译错误: "..tostring(compileError))
+        end
+        
+        loadFunc()
+    end)
+    
+    if not success then
+        warn("[XT脚本] 加载错误: "..tostring(err))
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "XT脚本错误",
+            Text = "加载失败: "..tostring(err),
+            Duration = 10
+        })
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "XT脚本",
+            Text = "加载成功!",
+            Duration = 3
+        })
+    end
+end
+
+-- 延迟加载确保注入器完全初始化
+wait(1)
+LoadXT_Script()
+
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "XT脚本"; Text ="载入中"; Duration = 2; })wait("3")
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "XT脚本"; Text ="小t牛比"; Duration = 2; })wait("3")
