@@ -288,3 +288,59 @@ end
 end
 })
 
+Tab:AddTextbox({
+	Name = "跳跃高度",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end	 
+})
+
+Tab:AddTextbox({
+	Name = "重力设置",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Workspace.Gravity = Value
+	end
+})
+
+Tab:AddToggle({
+	Name = "穿墙",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    Noclip = true
+		    Stepped = game.RunService.Stepped:Connect(function()
+			    if Noclip == true then
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+                        if b.Name == game.Players.LocalPlayer.Name then
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    v.CanCollide = false
+                                end
+                            end
+                        end
+                    end
+			    else
+				    Stepped:Disconnect()
+			    end
+		    end)
+	    else
+		    Noclip = false
+	    end
+	end
+})
+
+Tab:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end
+})
