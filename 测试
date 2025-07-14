@@ -785,6 +785,7 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+
 Tab:AddButton({
     Name = "子弹追踪",
     Callback = function()
@@ -802,6 +803,7 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+
 Tab:AddButton({
     Name = "死亡笔记",
     Callback = function()
@@ -819,6 +821,7 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+
 Tab:AddButton({
     Name = "透视",
     Callback = function()
@@ -926,6 +929,7 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(123, 104, 238)
 })
+
 Tab:AddButton({
     Name = "跟踪玩家",
     Callback = function()
