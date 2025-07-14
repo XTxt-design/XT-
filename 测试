@@ -243,90 +243,48 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-
 	Name = "点击传送工具",
-
 	Callback = function()
-
 mouse = game.Players.LocalPlayer:GetMouse() tool = Instance.new("Tool") tool.RequiresHandle = false tool.Name = "[FE] TELEPORT TOOL" tool.Activated:connect(function() local pos = mouse.Hit+Vector3.new(0,2.5,0) pos = CFrame.new(pos.X,pos.Y,pos.Z) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos end) tool.Parent = game.Players.LocalPlayer.Backpack
-
 	end
-
 })
 
 Tab:AddButton({
-
 	Name = "无敌",
-
 	Callback = function()
-
 local lp = game:GetService "Players".LocalPlayer
-
 if lp.Character:FindFirstChild "Head" then
-
     local char = lp.Character
-
     char.Archivable = true
-
     local new = char:Clone()
-
     new.Parent = workspace
-
     lp.Character = new
-
     wait(2)
-
     local oldhum = char:FindFirstChildWhichIsA "Humanoid"
-
     local newhum = oldhum:Clone()
-
     newhum.Parent = char
-
     newhum.RequiresNeck = false
-
     oldhum.Parent = nil
-
     wait(2)
-
     lp.Character = char
-
     new:Destroy()
-
     wait(1)
-
     newhum:GetPropertyChangedSignal("Health"):Connect(
-
         function()
-
             if newhum.Health <= 0 then
-
                 oldhum.Parent = lp.Character
-
                 wait(1)
-
                 oldhum:Destroy()
-
             end
-
         end)
-
     workspace.CurrentCamera.CameraSubject = char
-
     if char:FindFirstChild "Animate" then
-
         char.Animate.Disabled = true
-
         wait(.1)
-
         char.Animate.Disabled = false
-
     end
-
     lp.Character:FindFirstChild "Head":Destroy()
-
 end
-
 end
-
 })
 
