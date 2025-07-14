@@ -393,6 +393,7 @@ Tab:AddToggle({
 	end
 
 })
+
 Tab:AddButton({
     Name = "传送玩家",
     Callback = function()
@@ -581,7 +582,17 @@ Tab:AddButton({
             local success, err = pcall(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/FPS-X-GUI/main/FPS_X.lua"))()
             end)
-            if succTab:AddButton({
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
     Name = "无限跳",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
@@ -775,7 +786,11 @@ Tab:AddButton({
                 OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
             end
         end)
-    enTab:AddButton({
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+    Tab:AddButton({
     Name = "无限跳",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
@@ -1154,7 +1169,6 @@ Tab:AddButton({
     Color = Color3.fromRGB(123, 104, 238)
 })
 
-
 local Tab = Window:MakeTab({
     Name = "加入服务器",
     Icon = "rbxassetid://4483345998",
@@ -1293,7 +1307,6 @@ Tab:AddButton({
     end,
     Color = Color3.fromRGB(255, 99, 71)
 })  
-
 
 Tab:AddButton({
     Name = "加载鬼脚本",
