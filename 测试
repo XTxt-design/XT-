@@ -447,97 +447,13 @@ Tab:AddButton({
     Color = Color3.fromRGB(123, 104, 238)
 })
 
-local Tab = Window:MakeTab({
-    Name = "加入服务器",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
 Tab:AddButton({
-  Name = "加入极速传奇",
-  Callback = function()
-local game_id = 3101667897
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入鲨口求生",
-  Callback = function()
-local game_id = 8908228901
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入监狱人生",
-  Callback = function()
-local game_id = 155615604
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入忍者传奇",
-  Callback = function()
-local game_id = 3956818381
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入Break in (故事)",
-  Callback = function()
-local game_id = 1318971886
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-Tab:AddButton({
-  Name = "加入自然灾害生存",
-  Callback = function()
-local game_id = 189707
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入力量传奇",
-  Callback = function()
-local game_id = 3623096087
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-Tab:AddButton({
-  Name = "加入餐厅大亨2",
-  Callback = function()
-local game_id = 3398014311
-        local game_url = "https://www.roblox.com/games/"..game_id
-        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end
-})
-
-local Tab = Window:MakeTab({
-    Name = "脚本",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-Tab:AddButton({
-    Name = "加载皮脚本",
+    Name = "无限跳",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
-                getgenv().XiaoPi = "皮脚本QQ群1002100032"
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua", true))()
+              loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
             end)
             if success then
                 OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
@@ -550,63 +466,316 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "加载导管中心",
+    Name = "修改玩家碰撞箱",
     Callback = function()
-        OrionLib:MakeNotification({Name = "提示", Content = "正在加载导管中心...", Time = 3})
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
-                loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\117\115\101\114\97\110\101\119\114\102\102\47\114\111\98\108\111\120\45\47\109\97\105\110\47\37\69\54\37\57\68\37\65\49\37\69\54\37\65\67\37\66\69\37\69\53\37\56\68\37\56\70\37\69\56\37\65\69\37\65\69\34\41\41\40\41\10")()
+                loadstring(game:HttpGet('https://pastebin.com/raw/JYFXjEVh'))()
             end)
             if success then
-                OrionLib:MakeNotification({Name = "成功", Content = "导管中心加载完成", Time = 3})
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
             else
                 OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
             end
         end)
     end,
-    Color = Color3.fromRGB(255, 99, 71)
+    Color = Color3.fromRGB(123, 104, 238)
 })
 
 Tab:AddButton({
-    Name = "加载落叶中心",
+    Name = "替身",
     Callback = function()
-        OrionLib:MakeNotification({Name = "提示", Content = "正在加载落叶中心...", Time = 3})
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
-                getgenv().LS = "落叶中心"
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/Deciduous-center-LS/main/%E8%90%BD%E5%8F%B6%E4%B8%AD%E5%BF%83%E6%B7%B7%E6%B7%86.txt"))()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
             end)
             if success then
-                OrionLib:MakeNotification({Name = "成功", Content = "落叶中心加载完成", Time = 3})
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
             else
                 OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
             end
         end)
     end,
-    Color = Color3.fromRGB(139, 69, 19)
+    Color = Color3.fromRGB(123, 104, 238)
 })
 
 Tab:AddButton({
-    Name = "加载鬼脚本",
+    Name = "反挂机V2",
     Callback = function()
-        OrionLib:MakeNotification({Name = "提示", Content = "正在加载鬼脚本...", Time = 3})
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
-                Ghost_Script = "作者_鬼"
-                Ghost_Script = "交流群858895377"
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/Ghost-Gui-888/Ghost-Script/refs/heads/main/QQ858895377"))()
+                loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
             end)
             if success then
-                OrionLib:MakeNotification({Name = "成功", Content = "鬼脚本加载完成", Time = 3})
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
             else
                 OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
             end
         end)
     end,
-    Color = Color3.fromRGB(50, 50, 50)
+    Color = Color3.fromRGB(123, 104, 238)
 })
 
 Tab:AddButton({
+    Name = "铁拳",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "阿尔宙斯自瞄",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()   
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "爬墙",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()  
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "FPS(变流畅)",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/FPS-X-GUI/main/FPS_X.lua"))()
+            end)
+            if succTab:AddButton({
+    Name = "无限跳",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "修改玩家碰撞箱",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://pastebin.com/raw/JYFXjEVh'))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "替身",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "反挂机V2",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "铁拳",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "阿尔宙斯自瞄",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()   
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "爬墙",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()  
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "FPS(变流畅)",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/FPS-X-GUI/main/FPS_X.lua"))()
+            end)
+ess then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "光影V4",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "让别让别人控制自己",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet(('https://pastefy.ga/a7RTi4un/raw'),true))()  
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "子弹追踪",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/1AJ69eRG"))()  
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    enTab:AddButton({
     Name = "无限跳",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
@@ -801,6 +970,7 @@ Tab:AddButton({
             end
         end)
     end,
+d,
     Color = Color3.fromRGB(123, 104, 238)
 })
 
@@ -984,3 +1154,179 @@ Tab:AddButton({
     Color = Color3.fromRGB(123, 104, 238)
 })
 
+
+local Tab = Window:MakeTab({
+    Name = "加入服务器",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "加入极速传奇",
+  Callback = function()
+local game_id = 3101667897
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入鲨口求生",
+  Callback = function()
+local game_id = 8908228901
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入监狱人生",
+  Callback = function()
+local game_id = 155615604
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入忍者传奇",
+  Callback = function()
+local game_id = 3956818381
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入Break in (故事)",
+  Callback = function()
+local game_id = 1318971886
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+Tab:AddButton({
+  Name = "加入自然灾害生存",
+  Callback = function()
+local game_id = 189707
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入力量传奇",
+  Callback = function()
+local game_id = 3623096087
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入餐厅大亨2",
+  Callback = function()
+local game_id = 3398014311
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+local Tab = Window:MakeTab({
+    Name = "脚本",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "加载皮脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                getgenv().XiaoPi = "皮脚本QQ群1002100032"
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua", true))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "加载导管中心",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载导管中心...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\117\115\101\114\97\110\101\119\114\102\102\47\114\111\98\108\111\120\45\47\109\97\105\110\47\37\69\54\37\57\68\37\65\49\37\69\54\37\65\67\37\66\69\37\69\53\37\56\68\37\56\70\37\69\56\37\65\69\37\65\69\34\41\41\40\41\10")()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "导管中心加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(255, 99, 71)
+})
+
+Tab:AddButton({
+    Name = "加载落叶中心",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载落叶中心...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                getgenv().LS = "落叶中心"
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/Deciduous-center-LS/main/%E8%90%BD%E5%8F%B6%E4%B8%AD%E5%BF%83%E6%B7%B7%E6%B7%86.txt"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "落叶中心加载完成", Time = 3})
+            else
+              OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(255, 99, 71)
+})  
+
+
+Tab:AddButton({
+    Name = "加载鬼脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载鬼脚本...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                Ghost_Scri = "作者_鬼"
+                Ghost_Script = "交流群858895377"
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Ghost-Gui-888/Ghost-Script/refs/heads/main/QQ858895377"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "鬼脚本加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(50, 50, 50)
+})
+
+
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(255, 99, 71)
+})
