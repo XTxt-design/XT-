@@ -401,58 +401,76 @@ local Tab = Window:MakeTab({
 })
 local about = UITab4:section("『LENG Script』",false)
 
-about:Button("加入极速传奇",function()
+Tab:AddButton({
+  Name = "加入极速传奇",
+  Callback = function()
 local game_id = 3101667897
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入鲨口生求2",function()
+Tab:AddButton({
+  Name = "加入鲨口求生",
+  Callback = function()
 local game_id = 8908228901
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入监狱人生",function()
+Tab:AddButton({
+  Name = "加入监狱人生",
+  Callback = function()
 local game_id = 155615604
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入忍者传奇",function()
+Tab:AddButton({
+  Name = "加入忍者传奇",
+  Callback = function()
 local game_id = 3956818381
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入Break in (故事)",function()
+Tab:AddButton({
+  Name = "加入Break in (故事)",
+  Callback = function()
 local game_id = 1318971886
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
-
-about:Button("加入自然灾害生存游戏",function()
+end})
+Tab:AddButton({
+  Name = "加入自然灾害生存",
+  Callback = function()
 local game_id = 189707
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入力量传奇",function()
+Tab:AddButton({
+  Name = "加入力量传奇",
+  Callback = function()
 local game_id = 3623096087
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-about:Button("加入餐厅大亨2",function()
+Tab:AddButton({
+  Name = "加入餐厅大亨2",
+  Callback = function()
 local game_id = 3398014311
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
+end})
 
-local ScriptCenterTab = Window:MakeTab({Name = "脚本中心", Icon = "rbxassetid://4483346000"})
+local Tab = Window:MakeTab({
+    Name = "各种脚本",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
 
--- 原有加载按钮：皮脚本
-addRoundButton(ScriptCenterTab, {
+Tab:AddButton({
     Name = "加载皮脚本",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
@@ -471,8 +489,7 @@ addRoundButton(ScriptCenterTab, {
     Color = Color3.fromRGB(123, 104, 238)
 })
 
--- 导管中心
-addRoundButton(ScriptCenterTab, {
+Tab:AddButton({
     Name = "加载导管中心",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载导管中心...", Time = 3})
@@ -490,8 +507,7 @@ addRoundButton(ScriptCenterTab, {
     Color = Color3.fromRGB(255, 99, 71)
 })
 
--- 落叶中心
-addRoundButton(ScriptCenterTab, {
+Tab:AddButton({
     Name = "加载落叶中心",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载落叶中心...", Time = 3})
@@ -510,8 +526,7 @@ addRoundButton(ScriptCenterTab, {
     Color = Color3.fromRGB(139, 69, 19)
 })
 
--- 鬼脚本
-addRoundButton(ScriptCenterTab, {
+Tab:AddButton({
     Name = "加载鬼脚本",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载鬼脚本...", Time = 3})
