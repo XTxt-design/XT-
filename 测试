@@ -160,6 +160,12 @@ OrionLib:MakeNotification({
 	Time = 2
 })
 
+local Tab = Window:MakeTab({
+    Name = "通用",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
 local Section = Tab:AddSection({
 	Name = "各种功能"
 })
