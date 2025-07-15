@@ -413,6 +413,22 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "美丽天空（带动态阴影）",
+  Callback = function()
+    local light = game.Lighting
+    for i, v in pairs(light:GetChildren()) do
+      v:Destroy()
+    end
+
+    local ter = workspace.Terrain
+    local color = Instance.new("ColorCorrectionEffect")
+    local bloom = Instance.new("BloomEffect")
+    local sun = Instance.new("SunRaysEffect")
+    local blur = Inst
+  end
+})
+
+Tab:AddButton({
     Name = "进入提示",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
