@@ -1270,6 +1270,77 @@ Tab:AddButton({
     Color = Color3.fromRGB(123, 104, 238)
 })
 
+Tab:AddButton({
+    Name = "fps显示",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "飞车",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "工具挂",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/StandAwekening.lua"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+	Name = "建筑工具",
+	Callback = function()
+		Hammer = Instance.new("HopperBin")
+		Hammer.Name = "锤子"
+		Hammer.BinType = 4
+		Hammer.Parent = game.Players.LocalPlayer.Backpack
+		Clone = Instance.new("HopperBin")
+		Clone.Name = "克隆"
+		Clone.BinType = 3
+		Clone.Parent = game.Players.LocalPlayer.Backpack
+		Grab = Instance.new("HopperBin")
+		Grab.Name = "抓取"
+		Grab.BinType = 2
+	end
+})
+
 local Tab = Window:MakeTab({
     Name = "加入服务器",
     Icon = "rbxassetid://4483345998",
@@ -1346,6 +1417,32 @@ local game_id = 3398014311
         local game_url = "https://www.roblox.com/games/"..game_id
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
 end
+})
+
+local Tab = Window:MakeTab({
+	Name = "音乐",
+	Icon = "rbxassetid://10527577695",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+   Name = "防空警报",
+   Callback = function()
+    local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://792323017"
+    sound.Parent = game.Workspace
+    sound:Play()
+    end
+ })
+ 
+Tab:AddButton({
+   Name = "义勇军进行曲",
+   Callback = function()
+   local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1845918434"
+    sound.Parent = game.Workspace
+    sound:Play() 
+   end
 })
 
 local Tab = Window:MakeTab({
@@ -1464,24 +1561,6 @@ Tab:AddButton({
         end)
     end,
     Color = Color3.fromRGB(50, 50, 50)
-})
-
-Tab:AddButton({
-    Name = "北约中心",
-    Callback = function()
-        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
-        task.spawn(function()
-            local success, err = pcall(function()
-               loadstring(game:HttpGet("https://raw.githubusercontent.com/USA868/114514-55-646-114514-88-61518-618-840-1018-634-10-4949-3457578401-615/main/Protected-36.lua"))() 
-            end)
-            if success then
-                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
-            else
-                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
-            end
-        end)
-    end,
-    Color = Color3.fromRGB(123, 104, 238)
 })
 
 local Tab = Window:MakeTab({
