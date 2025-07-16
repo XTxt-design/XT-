@@ -1402,7 +1402,7 @@ Createtitle.BackgroundColor3 = Color3.new(1, 1, 1)
 Createtitle.BackgroundTransparency = 1
 Createtitle.Size = UDim2.new(0, 108, 0, 25)
 Createtitle.Font = Enum.Font.GothamBlack
-Createtitle.Text = "ato汉化脚本"
+Createtitle.Text = "XT蜂群脚本"
 Createtitle.TextColor3 = Color3.new(1, 1, 1)
 Createtitle.TextSize = 14
  
@@ -1457,7 +1457,7 @@ Createtitle2.BackgroundColor3 = Color3.new(1, 1, 1)
 Createtitle2.BackgroundTransparency = 1
 Createtitle2.Size = UDim2.new(0, 108, 0, 25)
 Createtitle2.Font = Enum.Font.GothamBlack
-Createtitle2.Text = "ato汉化脚本"
+Createtitle2.Text = "XT蜂群脚本"
 Createtitle2.TextColor3 = Color3.new(1, 1, 1)
 Createtitle2.TextSize = 14
  
@@ -1481,7 +1481,7 @@ Welcome.BackgroundTransparency = 1
 Welcome.Position = UDim2.new(0, 0, 0.313432842, 0)
 Welcome.Size = UDim2.new(0, 266, 0, 50)
 Welcome.Font = Enum.Font.GothamBold
-Welcome.Text = "欢迎使用ato汉化的脚本"
+Welcome.Text = "欢迎使用XT蜂群脚本"
 Welcome.TextColor3 = Color3.new(1, 1, 1)
 Welcome.TextSize = 25
 Welcome.TextWrapped = true
