@@ -1362,6 +1362,33 @@ end
 })
 
 Tab:AddButton({
+  Name = "加入Doors",
+  Callback = function()
+local game_id = 2440500124
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入蜂群模拟器",
+  Callback = function()
+local game_id = 601130232
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
+  Name = "加入被遗弃",
+  Callback = function()
+local game_id = 6331902150
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end
+})
+
+Tab:AddButton({
   Name = "加入鲨口求生",
   Callback = function()
 local game_id = 8908228901
