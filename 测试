@@ -1494,7 +1494,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "冷寂脚本（卡密：冷寂牛逼2830687417是人机）",
+    Name = "冷寂脚本（KL牛逼冷寂牛逼）",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
@@ -2796,6 +2796,10 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "实用类脚本"
+})
+
 Tab:AddButton({
     Name = "Doors英文脚本",
     Callback = function()
@@ -2867,6 +2871,10 @@ Tab:AddButton({
         end)
     end,
     Color = Color3.fromRGB(123, 104, 238)
+})
+
+local Section = Tab:AddSection({
+	Name = "Doors娱乐脚本"
 })
 
 Tab:AddButton({
