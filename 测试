@@ -3220,6 +3220,54 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
+    Name = "蜂群模拟器",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "XT蜂群脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/XTxt-design/XT-/refs/heads/main/%E8%9C%82%E7%BE%A4%E8%84%9A%E6%9C%AC%E6%B1%89%E5%8C%96.txt"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+local Tab = Window:MakeTab({
+    Name = "死铁轨",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "红叶子脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet("https://getnative.cc/script/loader"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+local Tab = Window:MakeTab({
 	Name = "伐木大亨",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
