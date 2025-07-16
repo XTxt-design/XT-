@@ -2856,7 +2856,6 @@ Tab:AddButton({
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
-            local success, err = pcall(function()
                loadstring(game:HttpGet(("https://raw.githubusercontent.com/thefigureblack/doors/main/insanemodev5.lua"),true))() 
             end)
             if success then
@@ -3088,12 +3087,6 @@ Tab:AddButton({
         end)
     end,
     Color = Color3.fromRGB(123, 104, 238)
-})
-
-local Tab = Window:MakeTab({
-  Name = "DOORS娱乐十字架(只对自己召唤的怪有用)",
-  Icon = "rbxassetid://4483345998",
-  PremiumOnly = false
 })
 
 local Tab = Window:MakeTab({
