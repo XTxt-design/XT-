@@ -3121,12 +3121,6 @@ Tab:AddButton({
     Color = Color3.fromRGB(123, 104, 238)
 })
 
-local Tab = Window:MakeTab({
-  Name = "DOORS娱乐十字架(只对自己召唤的怪有用)",
-  Icon = "rbxassetid://4483345998",
-  PremiumOnly = false
-})
-
 Tab:AddButton({
     Name = "刷怪菜单",
     Callback = function()
