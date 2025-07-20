@@ -1521,12 +1521,30 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "冷寂脚本（KL牛逼冷寂牛逼）",
+    Name = "冷寂脚本（卡密：KL牛逼冷寂牛逼）",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
         task.spawn(function()
             local success, err = pcall(function()
-               loadstring(game:HttpGet("https://raw.githubusercontent.com/xmtdnmsl/-1/refs/heads/main/LENGJI.lua"))() 
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/xmtdnmsl/toukanwodekuderenquanjiasiguang/refs/heads/main/LENGJINB.lua"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "XK脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet(('https://github.com/DevSloPo/DVES/raw/main/XK%20Hub')))()
             end)
             if success then
                 OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
@@ -3349,6 +3367,24 @@ Tab:AddButton({
         task.spawn(function()
         local success, err = pcall(function()
               loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/inkgame.lua", true))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
+    Name = "XK墨水游戏",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet(('https://github.com/DevSloPo/DVES/raw/main/XK%20Hub')))()
             end)
             if success then
                 OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
