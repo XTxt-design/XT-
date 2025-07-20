@@ -3740,3 +3740,24 @@ Tab:AddButton({
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2002.0133056640625, 1.2624330520629883, 985.2265625)
         end
 })
+
+Tab:AddButton({
+	Name = "雪城",	
+	Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9675.25, 59.63568115234375, 3783.50146484375)
+        end
+})
+        
+Tab:AddButton({
+	Name = "火山",	
+	Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11052.4189453125, 217.59571838378906, 4898.76416015625)
+        end
+})                
+        
+        Tab:AddButton({
+	Name = "公路",	
+	Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13095.255859375, 217.59567260742188, 5905.240234375)
+        end
+})
