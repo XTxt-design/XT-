@@ -3729,3 +3729,21 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
+local SGV_Tab = UITab21:section("选择传送点",false)
+
+        SGV_Tab:Button("城市",function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2002.0133056640625, 1.2624330520629883, 985.2265625)
+        end)
+
+        SGV_Tab:Button("雪城",function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9675.25, 59.63568115234375, 3783.50146484375)
+        end)
+
+        SGV_Tab:Button("火山",function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11052.4189453125, 217.59571838378906, 4898.76416015625)
+        end)
+
+        SGV_Tab:Button("公路",function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13095.255859375, 217.59567260742188, 5905.240234375)
+        end)
