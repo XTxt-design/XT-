@@ -1457,6 +1457,10 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "各种音乐"
+})
+
 Tab:AddButton({
    Name = "防空警报",
    Callback = function()
@@ -1475,6 +1479,288 @@ Tab:AddButton({
     sound.Parent = game.Workspace
     sound:Play() 
    end
+})
+
+Tab:AddButton({
+   Name = "彩虹瀑布",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1837879082"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "火车音",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://3900067524"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "Gentry Road",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://5567523008"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "植物大战僵尸",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://158260415"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "早安越南",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://8295016126"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "愤怒芒西 Evade?",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://5029269312"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "梅西",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://7354576319"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "永春拳",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1845973140"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "带劲的音乐",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://18841891575"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "韩国国歌",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1837478300"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "哥哥你女朋友不会吃醋吧?",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://8715811379"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "蜘蛛侠出场声音",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://9108472930"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "消防车",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://317455930"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "万圣节1🎃",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1837467198"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "好听的",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1844125168"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "国歌[Krx版]",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1845918434"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "妈妈生的",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://6689498326"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "Music Ball-CTT",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://9045415830"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "电音",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://6911766512"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "梗合集",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://8161248815"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "Its been so long",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://6913550990"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "Baller",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://13530439660"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "男娘必听",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://6797864253"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "螃蟹之舞",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://54100886218"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "布鲁克林惨案",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://6783714255"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+Tab:AddButton({
+   Name = "航空模拟器音乐",
+   Callback = function()
+local sound = Instance.new("Sound")
+    sound.SoundId = "rbxassetid://1838080629"
+    sound.Parent = game.Workspace
+    sound:Play()
+end
+})
+
+local Section = Tab:AddSection({
+	Name = "音乐脚本"
+})
+
+Tab:AddButton({
+    Name = "音乐脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet(('https://pastebin.com/raw/g97RafnE'),true))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
 })
 
 local Tab = Window:MakeTab({
@@ -3436,4 +3722,10 @@ Tab:AddButton({
         end)
     end,
     Color = Color3.fromRGB(123, 104, 238)
+})
+
+local Tab = Window:MakeTab({
+	Name = "极速传奇",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
