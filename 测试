@@ -3881,89 +3881,90 @@ local Section = Tab:AddSection({
 	Name = "属性修改"
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "经验值修改",
 	Default = "",
 	TextDisappear = true,
         Callback = function(Value)
             game:GetService("Players").LocalPlayer.exp.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "经验值已设置为: "..arg})
-        end)
+        end
     end
 })
-  Tab:AddTextbox({
+
+Tab:AddButton({
 	Name = "修改等级",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)      
             game:GetService("Players").LocalPlayer.level.Value = tonumber(arg) or 1
             WindUI:Notify({Title = "修改成功", Content = "等级已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改比赛数",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Races.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "比赛数已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改圈数",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Hoops.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "圈数已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改重生次数",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "重生次数已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改步数",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Steps.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "步数已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改尾迹容量",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.maxPetCapacity.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "尾迹容量已设置为: "..arg})
-        end)
+        end
     end
 })
 
-Tab:AddTextbox({
+Tab:AddButton({
 	Name = "修改宝石数",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.Gems.Value = tonumber(arg) or 0
             WindUI:Notify({Title = "修改成功", Content = "宝石数量已设置为: "..arg})
-        end)
+        end
     end
 })
