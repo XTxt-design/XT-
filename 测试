@@ -3719,6 +3719,24 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "墨水游戏汉化脚本",
+    Callback = function()
+        OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
+        task.spawn(function()
+        local success, err = pcall(function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/hdjsjjdgrhj/OK/refs/heads/main/sb"))()
+            end)
+            if success then
+                OrionLib:MakeNotification({Name = "成功", Content = "加载完成", Time = 3})
+            else
+                OrionLib:MakeNotification({Name = "失败", Content = "错误: " .. err, Time = 3})
+            end
+        end)
+    end,
+    Color = Color3.fromRGB(123, 104, 238)
+})
+
+Tab:AddButton({
     Name = "实用脚本1",
     Callback = function()
         OrionLib:MakeNotification({Name = "提示", Content = "正在加载...", Time = 3})
@@ -3850,4 +3868,96 @@ Tab:AddButton({
 	Callback = function()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13095.255859375, 217.59567260742188, 5905.240234375)
         end
+})
+
+local Section = Tab:AddSection({
+	Name = "属性修改"
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改经验值",
+    Placeholder = "输入经验值",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.exp.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "经验值已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改等级",
+    Placeholder = "输入等级",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.level.Value = tonumber(arg) or 1
+            WindUI:Notify({Title = "修改成功", Content = "等级已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改比赛数",
+    Placeholder = "输入比赛数",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.leaderstats.Races.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "比赛数已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改圈数",
+    Placeholder = "输入圈数",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.leaderstats.Hoops.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "圈数已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改重生次数",
+    Placeholder = "输入重生次数",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "重生次数已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改步数",
+    Placeholder = "输入步数",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.leaderstats.Steps.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "步数已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改尾迹容量",
+    Placeholder = "输入容量",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.maxPetCapacity.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "尾迹容量已设置为: "..arg})
+        end)
+    end
+})
+
+Tabs.AttributeTab:Input({
+    Title = "修改宝石数量",
+    Placeholder = "输入宝石数量",
+    Callback = function(arg)
+        pcall(function()
+            game:GetService("Players").LocalPlayer.Gems.Value = tonumber(arg) or 0
+            WindUI:Notify({Title = "修改成功", Content = "宝石数量已设置为: "..arg})
+        end)
+    end
 })
