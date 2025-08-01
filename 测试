@@ -3883,7 +3883,6 @@ local Section = Tab:AddSection({
 
 Tab:AddButton({
 	Name = "经验值修改",
-	Default = ""
 	ValueName = "数值",
         Callback = function(Value)
             game:GetService("Players").LocalPlayer.exp.Value = tonumber(arg) or 0
@@ -3893,8 +3892,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "修改等级",
-	Default = "",
+	Name = "修改等级"
 	ValueName = "数值",
 	Callback = function(Value)      
             game:GetService("Players").LocalPlayer.level.Value = tonumber(arg) or 1
@@ -3905,7 +3903,6 @@ Tab:AddButton({
 
 Tab:AddButton({
 	Name = "修改比赛数",
-	Default = "",
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Races.Value = tonumber(arg) or 0
@@ -3916,7 +3913,6 @@ Tab:AddButton({
 
 Tab:AddButton({
 	Name = "修改圈数",
-	Default = "",
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Hoops.Value = tonumber(arg) or 0
@@ -3927,7 +3923,6 @@ Tab:AddButton({
 
 Tab:AddButton({
 	Name = "修改重生次数",
-	Default = "",
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = tonumber(arg) or 0
@@ -3938,7 +3933,6 @@ Tab:AddButton({
 
 Tab:AddButton({
 	Name = "修改步数",
-	Default = "",
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.leaderstats.Steps.Value = tonumber(arg) or 0
@@ -3949,7 +3943,6 @@ Tab:AddButton({
 
 Tab:AddButton({
 	Name = "修改尾迹容量",
-	Default = "",
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.maxPetCapacity.Value = tonumber(arg) or 0
@@ -3959,8 +3952,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "修改宝石数",
-	Default = "",
+	Name = "修改宝石"
 	ValueName = "数值",
 	Callback = function(Value)
             game:GetService("Players").LocalPlayer.Gems.Value = tonumber(arg) or 0
